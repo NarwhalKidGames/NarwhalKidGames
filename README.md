@@ -1,6 +1,6 @@
 # Step by step on setting up NKG
 
-- Download the files [here](https://github.com/NarwhalKidGames/NarwhalKidGames/archive/refs/heads/main.zip).
+- Download the files [here](https://github.com/NarwhalKidGames/NarwhalKidGames/archive/refs/heads/main.zip) (the final size is ~1.93 GB).
 
 - Once they finish downloading, click on the `NarwhalKidGames-main` file a single time.
 
