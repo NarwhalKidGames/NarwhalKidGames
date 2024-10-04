@@ -16,7 +16,7 @@ server.get('*', (req, res) => {
 
 if (process.env && process.env.replit !== '') {
   server.listen(PORT, () => {
-    console.log(`Server listening on port: ${PORT}`);
+    console.log(`Website running at http://localhost:${PORT}`);
     online = true;
   });
 }
