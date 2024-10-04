@@ -48,9 +48,9 @@ function makeNewGameBox(dispName, link, isIfrm) {
 
 
 games = [
-  ["narwhalgpt", "/chat/"], 
+  // ["narwhalgpt", "/chat/"], 
   ["1v1.lol", "./game/1v1lol/", true], 
-  ["doki doki literature ...", "https://backend.narwhalkid.com/ddlc/"], 
+  // ["doki doki literature ...", "https://backend.narwhalkid.com/ddlc/"], 
   ["movies, tv, & anime", "./game/streaming/"], 
   ["minesweeper", "./game/minesweeper/", true], 
   ["2048Verse", "https://2048verse.com/"], 
@@ -58,7 +58,7 @@ games = [
   ["clicker heroes", "./game/clickerheroes/"],
   ["retro bowl", "./game/retrobowl/"],
   ["retro bowl college", "./game/retrobowlcollege/"],
-  ["gba games", "/emulators/gba/"], 
+  ["gba games", "./game/emulators/gba/"], 
   ["unrestricted youtube", "https://inv.nadeko.net/feed/popular"], 
   ["funny shooter 2", "./game/funnyshooter2/"], 
   ["sort the court", "./game/sortthecourt/"], 
@@ -157,7 +157,7 @@ checkWebsite(proxyURL + "hvtrs8%2F-wuw%2Cncruhcliif.aoo%2Frrmx{Tgsv.hsmn");
 function loadGames() {
   document.querySelectorAll('.game').forEach((element) => { element.remove() })
   games.forEach((element) => {
-    if(!!element[2] && typeof(proxyEnabled) == "undefined") {
+    if(!!element[2] && !proxyEnabled) {
       return;
     }
     makeNewGameBox(element[0], element[1])
