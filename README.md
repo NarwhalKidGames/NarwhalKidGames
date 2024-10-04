@@ -4,7 +4,7 @@
 
 - Once they finish downloading, click on the `NarwhalKidGames-main` file a single time.
 
-- Right click the `NarwhalKidGames-main` file and click `Extract All...`.
+- Right click the `NarwhalKidGames-main` file and click `Extract All...` (the extraction starts out slow but gets much faster at the end).
 
 - Once it's finished extracting, you can delete the `NarwhalKidGames-main` file with the icon that has the zipper on it. It should also say `Compressed (zipped) Folder` in the `type` section.
 
