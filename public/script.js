@@ -153,7 +153,7 @@ async function checkWebsite(url) {
 if (typeof(proxyURL) != "undefined") {
   checkWebsite(proxyURL + "hvtrs8%2F-wuw%2Cncruhcliif.aoo%2Frrmx{Tgsv.hsmn");
 } else {
-  loadGames()
+  loadGames();
 }
 
 
