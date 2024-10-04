@@ -18,4 +18,4 @@ Note: If you ever want to close the website, open the `! END.bat` file.
 
 Note 2: You will need to open the `! START.bat` file every time you restart your computer.
 
-Thats it!
+Thats it! Wanna share to your friends? Use [tinyurl.com/narwhalkidgames](https://tinyurl.com/narwhalkidgames/)
