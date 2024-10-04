@@ -144,7 +144,7 @@ async function checkWebsite(url) {
   }
 }
 
-if (typeof(proxyURL) != "undefined") {
+if (typeof(proxyBase) != "undefined") {
   checkWebsite(proxyBase);
 } else {
   loadGames();
