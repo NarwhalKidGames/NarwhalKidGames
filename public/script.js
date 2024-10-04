@@ -133,13 +133,7 @@ async function checkWebsite(url) {
       const response = await fetch(url);
 
       if (response.ok) {
-          const data = await response.json();
-
-          if (data.proxyEnabled === true) {
-              proxyEnabled = true;
-          } else {
-              proxyEnabled = false;
-          }
+          proxyEnabled = true;
       } else {
           proxyEnabled = false;
       }
