@@ -1,0 +1,1 @@
+const proxyURL = "https://f0il.narwhalkid.com/uv/service/"
