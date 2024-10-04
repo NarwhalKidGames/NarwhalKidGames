@@ -150,7 +150,11 @@ async function checkWebsite(url) {
   }
 }
 
-checkWebsite(proxyURL + "hvtrs8%2F-wuw%2Cncruhcliif.aoo%2Frrmx{Tgsv.hsmn");
+if (typeof(proxyURL) != "undefined") {
+  checkWebsite(proxyURL + "hvtrs8%2F-wuw%2Cncruhcliif.aoo%2Frrmx{Tgsv.hsmn");
+} else {
+  loadGames()
+}
 
 
 
