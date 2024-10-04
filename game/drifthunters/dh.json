@@ -1,0 +1,13 @@
+{
+    "TOTAL_MEMORY": 1073741824,
+    "dataUrl": "https://www.narwhalkid.com/games/game/drifthunters/dh.data.unityweb",
+    "asmCodeUrl": "https://www.narwhalkid.com/games/game/drifthunters/dh.asm.code.unityweb",
+    "asmMemoryUrl": "https://www.narwhalkid.com/games/game/drifthunters/dh.asm.memory.unityweb",
+    "asmFrameworkUrl": "https://www.narwhalkid.com/games/game/drifthunters/dh.asm.framework.unityweb",
+    "backgroundUrl": "",
+    "splashScreenStyle": "Dark",
+    "backgroundColor": "#231F20",
+    "totalFile": 6,
+    "size": 134902255,
+    "split_size": 22483710
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="We check for and encourage the use of an ad blocker.">
+    <!--link rel="icon" href="favicon.ico"-->
+
+    <meta property="og:image" content="ff-logo.png" />
+
+    <title>Streaming</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/cover.css">
+
+    <style>
+    #no-blocking, #partial-blocking, #all-good, #firefox {
+      display: none;
+    }
+    #partial-blocking p.main-warning {
+      font-size: 40px;
+      color: orange;
+      font-weight: bold;
+      letter-spacing: -1.2px;      
+    }
+    #firefox p.main-warning {
+      font-size: 40px;
+      color: orange;
+      font-weight: bold;
+      letter-spacing: -1.2px;      
+    }
+    #no-blocking p.main-warning {
+      font-size: 40px;
+      color: #999;
+      font-weight: bold;
+      letter-spacing: -1.2px;
+    }
+    #all-good, #no-js {
+      color: lightgreen;
+    }
+    #all-good p { font-size: 30px; }
+    #no-js p { font-size: 25px; }
+
+    @media (min-width: 768px) {
+      #all-good p { font-size: 40px; }
+      #no-js p { font-size: 35px; }
+    }    
+
+    /* .github, .chrome, .firefox, .safari, .opera, .ios, .edge, .pihole {
+      display: none;
+    } */
+    /* Browser logos from https://github.com/alrra/browser-logos */
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+
+          <div class="inner cover">
+            <!-- Loading image -->
+            <!-- <p class="lead" id="testing" style="display: none;"><img src="images/testing.gif" alt="testing" /></p> -->
+            <!-- Ad blocking tests (requests for these images should be blocked by your ad blocker) -->
+            <div id="image-tests">
+              <img id="test-ad" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="visibility: hidden; width:1px; height:1px;" alt="test-ad" />
+              <img id="test-whitelist" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="visibility: hidden; width:1px; height:1px;" alt="test-whitelist" />
+            </div>
+
+            <!-- No JS -->
+            <noscript>
+              <div id="no-js">
+                <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> You're advanced! (No JS)</p>
+              </div>
+            </noscript>
+
+            <!-- Evertying okay? -->
+            <div id="all-good">
+              <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> You're all done! Here's your streaming sites.</p>
+              <p class="lead">
+                <h2>TV & Movies:</h2>
+                <br>
+                <a href="https://binged.to/" class="btn btn-lg btn-success firefox">Binged</a>
+                <a href="https://www.braflix.gd/" class="btn btn-lg btn-success firefox">Braflix</a>
+                <br>
+                <h2>Anime:</h2>
+                <a href="https://123anime.info/" class="btn btn-lg btn-success firefox">123ANIME</a>
+                <a href="https://4anime.gg/" class="btn btn-lg btn-success firefox">4Anime</a>
+                <a href="https://anicrush.to/" class="btn btn-lg btn-success firefox">AniCrush</a>
+                <br>
+                <h3>Warning: NEVER go to any of these sites without an ad blocker.</h3>
+              </p>
+            </div>
+
+
+            <!-- No ad blocking -->
+            <div id="no-blocking">
+              <p class="lead main-warning">Now, you need to install uBlock Origin</p>
+              <p class="lead">
+                <a href="https://addons.mozilla.org/firefox/addon/ublock-origin/" class="btn btn-lg btn-success firefox"><img src="images/firefox_32x32.png" alt="firefox" /> uBlock Origin</a>
+              </p>
+            </div>
+
+            <!-- Partial blocking -->
+            <div id="firefox">
+              <p class="lead main-warning">First, you need to install Firefox</p>
+              <p class="lead">
+                <a href="https://drive.google.com/file/d/1OyuoQn3aPxvrOcomx2o5sIKXriLcAa72/view" class="btn btn-lg btn-default pihole"><img src="images/firefox_32x32.png" alt="firefox" /> Firefox Download</a>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    
+    <script>
+    // function to check if image has loaded, taken from http://stackoverflow.com/a/1977898
+    function isImageOk(img) {
+        // Image was removed from the page code (issue #1)
+        if (typeof img === 'undefined') {
+            return false;
+        }
+
+        // During the onload event, IE correctly identifies any images that
+        // weren’t downloaded as not complete. Others should too. Gecko-based
+        // browsers act like NS4 in that they report this incorrectly.
+        // NOTE: This check doesn't seem to be needed - and doesn't work 
+        // reliably in MS Edge in my tests. So disabling for now.
+        //if (!img.complete) {
+        //    return false;
+        //}
+
+        // However, they do have two very useful properties: naturalWidth and
+        // naturalHeight. These give the true size of the image. If it failed
+        // to load, either of these should be zero.
+        if (typeof img.naturalWidth !== "undefined" && img.naturalWidth <= 1) {
+            return false;
+        }
+
+        // No other way of checking: assume it’s ok.
+        return true;
+    }
+
+    var isMobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(navigator.appVersion);
+    var isPiHole = (window.location.search.substring(1) == 'pihole');
+
+    $(document).ready(function() {
+      $("#testing").fadeIn('fast');      
+      $("img#test-ad").attr('src', 'https://widgets.outbrain.com/images/widgetIcons/ob_logo_16x16.png?advertiser=1&' + escape(new Date()));
+      $("img#test-whitelist").attr('src', 'https://gstatic.com/webp/gallery3/1.png?ads=1&' + escape(new Date()));
+
+      // browser detect code from http://stackoverflow.com/a/13480430
+      var BrowserDetect = {
+          init: function () {
+              this.browser = this.searchString(this.dataBrowser) || "Other";
+              this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
+          },
+          searchString: function (data) {
+              for (var i = 0; i < data.length; i++) {
+                  var dataString = data[i].string;
+                  this.versionSearchString = data[i].subString;
+
+                  if (dataString.indexOf(data[i].subString) !== -1) {
+                      return data[i].identity;
+                  }
+              }
+          },
+          searchVersion: function (dataString) {
+              var index = dataString.indexOf(this.versionSearchString);
+              if (index === -1) {
+                  return;
+              }
+
+              var rv = dataString.indexOf("rv:");
+              if (this.versionSearchString === "Trident" && rv !== -1) {
+                  return parseFloat(dataString.substring(rv + 3));
+              } else {
+                  return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+              }
+          },
+
+          dataBrowser: [
+              {string: navigator.userAgent, subString: "Edge", identity: "MS Edge"},
+              {string: navigator.userAgent, subString: "MSIE", identity: "Explorer"},
+              {string: navigator.userAgent, subString: "Trident", identity: "Explorer"},
+
+              {string: navigator.userAgent, subString: "Firefox", identity: "Firefox"},
+              
+              {string: navigator.userAgent, subString: "Opera", identity: "Opera"},
+              {string: navigator.userAgent, subString: "OPR", identity: "Opera"},
+
+              {string: navigator.userAgent, subString: "Chrome", identity: "Chrome"},
+
+              {string: navigator.userAgent, subString: "iPad", identity: "iOS"},
+              {string: navigator.userAgent, subString: "iPhone", identity: "iOS"},
+              {string: navigator.userAgent, subString: "iPod", identity: "iOS"},
+
+              {string: navigator.userAgent, subString: "Safari", identity: "Safari"}
+          ]
+      };
+
+      if (isPiHole) {
+        $(".pihole").show();
+      } else {
+        BrowserDetect.init();
+        if (BrowserDetect.browser === "Firefox") {
+          $(".firefox").show();
+        } else if (BrowserDetect.browser === "Chrome") {
+          $(".chrome").show();
+        } else if (BrowserDetect.browser === "Safari") {
+          $(".safari").show();
+        } else if (BrowserDetect.browser === "Opera") {
+          $(".opera").show();
+        } else if (BrowserDetect.browser === "MS Edge") {
+          $(".edge").show();        
+        } else if (BrowserDetect.browser === "iOS" && !window.MSStream) {
+          $(".ios").show();
+        } else {
+          $(".github").show();
+        }
+      }
+
+      $('#image-tests').imagesLoaded(function() {
+        var adLoaded = isImageOk($("img#test-ad")[0]);
+        var whitelistAdLoaded = isImageOk($("img#test-whitelist")[0]);
+        $("#testing").hide();
+        // all-good if both ads failed
+        // Unless we're testing on mobile, or for Pi-hole.net users.
+        if (!adLoaded && (!whitelistAdLoaded || (isMobile || isPiHole || (BrowserDetect.browser === "Safari")))) {
+            $("#all-good").fadeIn();
+        } else if (adLoaded) {
+          if(BrowserDetect.browser == "Firefox") {
+            $("#no-blocking").fadeIn();
+          } else {
+            $("#firefox").fadeIn();
+          }
+            
+        } else if (whitelistAdLoaded) {
+            //TODO: The check for whitelist needs to be updated (need something that Adblock Plus, and those with 'acceptable ads' programs, will load but not uBlock Origin).
+            //$("#partial-blocking").fadeIn();
+            $("#all-good").fadeIn();
+        }          
+      });
+
+    });
+
+    //document.write("You are using <strong>" + BrowserDetect.browser + "</strong> with version <strong>" + BrowserDetect.version + "</strong>");
+
+    </script>
+  </body>
+</html>
