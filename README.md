@@ -10,7 +10,7 @@
 
 - Open the `NarwhalKidGames-main` folder you didn't delete.
 
-- Double click the `! START.bat` file (you may need to click `More info` and `Run anyway` the first time).
+- Double click the `! START` file (you may need to click `More info` and `Run anyway` the first time).
 
 - You're done! It should automatically open the website. If not, go to `localhost:3000`.
 
