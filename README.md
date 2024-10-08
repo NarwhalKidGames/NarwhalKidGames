@@ -14,8 +14,8 @@
 
 - You're done! It should automatically open the website. If not, go to `localhost:3000`.
 
-Note: If you ever want to close the website, open the `! END.bat` file.
+Note: If you ever want to close the website, open the `! END` file.
 
-Note 2: You will need to open the `! START.bat` file every time you restart your computer.
+Note 2: You will need to open the `! START` file every time you restart your computer.
 
 Thats it! Wanna share to your friends? Use [tinyurl.com/narwhalkidgames](https://tinyurl.com/narwhalkidgames/)
