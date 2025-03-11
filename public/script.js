@@ -50,7 +50,8 @@ function makeNewGameBox(dispName, link, isIfrm) {
 games = [
   // ["narwhalgpt", "/chat/"], 
   ["1v1.lol", "./game/1v1lol/", true], 
-  // ["doki doki literature ...", "https://backend.narwhalkid.com/ddlc/"], 
+  ["balatro", "https://backend.narwhalkid.com/balatro"], 
+  ["doki doki literature ...", "https://backend.narwhalkid.com/ddlc/"], 
   ["movies, tv, & anime", "./game/streaming/"], 
   ["minesweeper", "./game/minesweeper/", true], 
   ["2048Verse", "https://2048verse.com/"], 
@@ -59,7 +60,7 @@ games = [
   ["retro bowl", "./game/retrobowl/"],
   ["retro bowl college", "./game/retrobowlcollege/"],
   ["gba games", "./game/emulators/gba/"], 
-  ["unrestricted youtube", "https://inv.nadeko.net/feed/popular"], 
+  // ["unrestricted youtube", "https://inv.nadeko.net/feed/popular"], 
   ["funny shooter 2", "./game/funnyshooter2/"], 
   ["sort the court", "./game/sortthecourt/"], 
   ["geometry dash", "./game/gd/"], 
