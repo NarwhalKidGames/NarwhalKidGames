@@ -49,12 +49,14 @@ function makeNewGameBox(dispName, link, isIfrm) {
 
 games = [
   // ["narwhalgpt", "/chat/"], 
+  ["check for updates", "https://tinyurl.com/narwhalkidgames/"], 
   ["1v1.lol", "./game/1v1lol/", true], 
   ["balatro", "https://backend.narwhalkid.com/balatro"], 
   ["doki doki literature ...", "https://backend.narwhalkid.com/ddlc/"], 
   ["movies, tv, & anime", "./game/streaming/"], 
   ["minesweeper", "./game/minesweeper/", true], 
   ["2048Verse", "https://2048verse.com/"], 
+  ["crazy cattle 3d", "./game/crazycattle3d"], 
   ["minecraft", "./game/minecraft"], 
   ["clicker heroes", "./game/clickerheroes/"],
   ["retro bowl", "./game/retrobowl/"],
