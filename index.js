@@ -17,7 +17,7 @@ const openUrl = (url) => {
 };
 
 function getLocalVersion() {
-  return "v1.2.4";
+  return "v1.2.6";
 }
 
 async function getLatestVersion() {

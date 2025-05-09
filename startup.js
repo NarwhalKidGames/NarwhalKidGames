@@ -39,5 +39,7 @@ pm2.connect(function (err) {
         }
       });
     });
+
+    pm2.disconnect();
   });
 });
