@@ -10,7 +10,7 @@ pm2.connect(function (err) {
   pm2.start({
     script: './index.js',
     name: SCRIPT_NAME,
-    autorestart: true,
+    autorestart: false,
   }, function (err) {
     if (err) {
       console.error('Error starting process:', err);
