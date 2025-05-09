@@ -1,4 +1,5 @@
 const pm2 = require('pm2');
+const SCRIPT_NAME = 'NKG';
 
 pm2.connect(function (err) {
   if (err) {
@@ -8,15 +9,35 @@ pm2.connect(function (err) {
 
   pm2.start({
     script: './index.js',
-    name: 'NKG',
-  }, function (err, apps) {
+    name: SCRIPT_NAME,
+    autorestart: true,
+  }, function (err) {
     if (err) {
       console.error('Error starting process:', err);
-      return pm2.disconnect();
+      pm2.disconnect();
+      return;
     }
 
-    console.log('Process started successfully.');
+    console.log(`Started ${SCRIPT_NAME} with PM2`);
 
-    pm2.disconnect(); // Now we close the connection here
+    pm2.launchBus(function (err, bus) {
+      if (err) {
+        console.error('Failed to launch PM2 bus:', err);
+        pm2.disconnect();
+        return;
+      }
+
+      bus.on('process:exit', function (packet) {
+        if (
+          packet.process.name === SCRIPT_NAME &&
+          packet.process.exit_code === 123
+        ) {
+          console.log(`${SCRIPT_NAME} exited with code 123 — restarting...`);
+          pm2.restart(SCRIPT_NAME, () => {
+            console.log('Restart complete.');
+          });
+        }
+      });
+    });
   });
 });

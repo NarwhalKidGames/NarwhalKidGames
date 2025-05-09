@@ -9,7 +9,7 @@ const repoOwner = "NarwhalKidGames";
 const repoName = "NarwhalKidGames";
 
 function getLocalVersion() {
-  return "v1.2.1";
+  return "v1.2.3";
 }
 
 async function getLatestVersion() {
@@ -46,7 +46,8 @@ async function updateIfNeeded() {
       console.log(`Updating ${file.filename}`);
       await downloadAndReplaceFile(file);
     }
-    console.log("Update complete. Please restart START.bat");
+    console.log("Update complete. Restarting...");
+    process.exit(123);
   } else {
     console.log("No update needed.");
   }
