@@ -6,6 +6,16 @@ const fetch = require('node-fetch');
 const repoOwner = "NarwhalKidGames";
 const repoName = "NarwhalKidGames";
 
+const { exec } = require('child_process');
+const openUrl = (url) => {
+  const start =
+    process.platform === 'darwin' ? 'open' :
+    process.platform === 'win32' ? 'start' :
+    'xdg-open';
+
+  exec(`${start} ${url}`);
+};
+
 function getLocalVersion() {
   return "v1.2.4";
 }
@@ -70,7 +80,9 @@ async function updateIfNeeded() {
 
   server.listen(PORT, () => {
     console.log(`Website running at http://localhost:${PORT}`);
+    openUrl('http://localhost:3000');
   }).on('error', (err) => {
+    openUrl('http://localhost:3000');
     console.error(`Failed to start server on port ${PORT}:`, err.message);
     process.exit(1);
   });
