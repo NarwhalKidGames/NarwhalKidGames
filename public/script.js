@@ -48,11 +48,10 @@ function makeNewGameBox(dispName, link, isIfrm) {
 
 
 games = [
-  // ["narwhalgpt", "/chat/"], 
-  ["check for updates", "https://tinyurl.com/narwhalkidgames/"], 
+  // ["narwhalgpt", "/chat/"],
   ["1v1.lol", "./game/1v1lol/", true], 
   ["balatro", "https://backend.narwhalkid.com/balatro"], 
-  ["doki doki literature ...", "https://backend.narwhalkid.com/ddlc/"], 
+  ["doki doki literature club", "https://backend.narwhalkid.com/ddlc/"], 
   ["movies, tv, & anime", "./game/streaming/"], 
   ["minesweeper", "./game/minesweeper/", true], 
   ["2048Verse", "https://2048verse.com/"], 
@@ -82,7 +81,7 @@ games = [
   ["papas sushiria", "./game/papassushiria/"], 
   ["papas taco mia", "./game/papastacomia/"], 
   ["papas freezeria", "./game/papasfreezeria/"], 
-  ["pokemon tower defe...", "./game/ptd/"],  
+  ["pokemon tower defense", "./game/ptd/"],  
   ["plant daddy", "./game/plantdaddy/"],  
   ["this is the only level", "./game/thisistheonlylevel/"],  
   ["this is the only level 2", "./game/thisistheonlyleveltoo/"],
@@ -92,7 +91,7 @@ games = [
   ["friday night funkin", "./game/fridaynightfunkin"], 
   ["cookie clicker", "./game/cookieclicker"], 
   ["getaway shootout", "./game/getawayshootout"], 
-  ["achievement unlock...", "./game/achievementunlocked"], 
+  ["achievement unlocked", "./game/achievementunlocked"], 
   ["pizza tower", "./game/pizzatower"], 
   ["jump king", "./game/jumpking"], 
   ["basket random", "./game/basketrandom/"],

@@ -83,6 +83,10 @@ button:focus {
   font-weight: bolder;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(.46,.03,.52,.96);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0px 10px;
 }
 
 .game:hover h2 {
