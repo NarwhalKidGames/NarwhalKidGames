@@ -18,4 +18,6 @@ Note: If you ever want to close the website, open the `! END` file.
 
 Note 2: You will need to open the `! START` file every time you restart your computer.
 
+Note 3: If it asks you for Administrator permissions, you can say no and it'll still work.
+
 Thats it! Wanna share to your friends? Use [tinyurl.com/narwhalkidgames](https://tinyurl.com/narwhalkidgames/)
