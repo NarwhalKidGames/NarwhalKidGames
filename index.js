@@ -9,7 +9,7 @@ const repoOwner = "NarwhalKidGames";
 const repoName = "NarwhalKidGames";
 
 function getLocalVersion() {
-  return "v1.1";
+  return "v1.2";
 }
 
 async function getLatestVersion() {
