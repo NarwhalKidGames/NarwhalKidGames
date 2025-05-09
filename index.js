@@ -3,13 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
 
-const { spawn } = require('child_process');
-
 const repoOwner = "NarwhalKidGames";
 const repoName = "NarwhalKidGames";
 
 function getLocalVersion() {
-  return "v1.2.3";
+  return "v1.2.4";
 }
 
 async function getLatestVersion() {
@@ -72,5 +70,8 @@ async function updateIfNeeded() {
 
   server.listen(PORT, () => {
     console.log(`Website running at http://localhost:${PORT}`);
+  }).on('error', (err) => {
+    console.error(`Failed to start server on port ${PORT}:`, err.message);
+    process.exit(1);
   });
 })();
