@@ -20,6 +20,7 @@ games = [
   ["doki doki literature club", "https://backend.narwhalkid.com/ddlc/"], 
   ["movies, tv, & anime", "./game/streaming/"], 
   ["minesweeper", "./game/minesweeper/", true], 
+  ["gladihoppers", "./game/gladihoppers/"], 
   ["super smash flash", "./game/supersmashflash"],
   ["2048Verse", "https://2048verse.com/"], 
   ["crazy cattle 3d", "./game/crazycattle3d"], 
