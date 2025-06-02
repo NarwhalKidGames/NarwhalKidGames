@@ -17,6 +17,7 @@ games = [
   // ["narwhalgpt", "/chat/"],
   ["1v1.lol", "./game/1v1lol/", true], 
   ["balatro", "https://backend.narwhalkid.com/balatro"], 
+  ["dungeons and degenerate gamblers", "https://backend.narwhalkid.com/dndg"], 
   ["doki doki literature club", "https://backend.narwhalkid.com/ddlc/"], 
   ["movies, tv, & anime", "./game/streaming/"], 
   ["minesweeper", "./game/minesweeper/", true], 
