@@ -47,7 +47,7 @@ games = [
   ["gun mayhem", "./game/gunmayhem/"], 
   ["higher lower", "./game/higherlower/", true], 
   ["papa's pastaria", "./game/papaspastaria/"], 
-  ["papa's donutria", "./game/donutria/"], 
+  ["papa's donutria", "./game/papasdonutria/"], 
   ["papa's bakeria", "./game/papasbakeria/"], 
   ["papa's sushiria", "./game/papassushiria/"], 
   ["papa's taco mia", "./game/papastacomia/"], 
