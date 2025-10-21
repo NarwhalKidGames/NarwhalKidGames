@@ -14,7 +14,7 @@
 
 - You're done! It should automatically open the website. If not, go to `localhost:3000`.
 
-- Note: If it's blocked, you may need to use [firefox](https://drive.google.com/file/d/1igOHVQkm4KDsX-R3vNwuR08ukenc0WRL/view?usp=drive_link)
+- Note: If it's blocked, you may need to use [Firefox](https://drive.google.com/file/d/1igOHVQkm4KDsX-R3vNwuR08ukenc0WRL/view?usp=drive_link)
 
 Note: If you ever want to close the website, open the `! END` file.
 
